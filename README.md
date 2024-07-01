@@ -5,18 +5,22 @@ Bienvenue dans le projet d'archivage de rapports d'exécution. Ce manuel d'utili
 ## Table des matières
 1. [Introduction](#introduction)
 2. [Pré-requis](#pré-requis)
-3. [Choix de la source de données](#choix-de-la-source-de-données)
+3. [Configuration des fichiers](#configuration-des-fichiers)
+    - [Fichier dataset.csv](#fichier-datasetcsv)
+    - [Fichier properties](#fichier-properties)
+4. [Choix de la source de données](#choix-de-la-source-de-données)
     - [GitHub](#github)
     - [Artifactory](#artifactory)
     - [Jira](#jira)
-4. [Choix de l'outil d'archivage des rapports](#choix-de-loutil-darchivage-des-rapports)
+5. [Choix de l'outil d'archivage des rapports](#choix-de-loutil-darchivage-des-rapports)
     - [Archivage dans GitHub](#archivage-dans-github)
     - [Archivage dans Artifactory](#archivage-dans-artifactory)
     - [Archivage dans Jira](#archivage-dans-jira)
-5. [Configuration](#configuration)
-6. [Utilisation](#utilisation)
-7. [Support](#support)
-8. [Licence](#licence)
+6. [Configuration](#configuration)
+7. [Utilisation](#utilisation)
+8. [Configuration du workflow GitHub](#configuration-du-workflow-github)
+9. [Support](#support)
+10. [Licence](#licence)
 
 ## Introduction
 Ce projet permet d'archiver les rapports d'exécution générés à partir de différentes sources de données comme GitHub, Artifactory, ou Jira. Vous pouvez également choisir où archiver ces rapports: sur GitHub, Artifactory, ou Jira.
@@ -25,6 +29,14 @@ Ce projet permet d'archiver les rapports d'exécution générés à partir de di
 - Python 3.8 ou supérieur
 - Accès aux API des outils sélectionnés (GitHub, Artifactory, Jira)
 - Clés d'API ou tokens d'authentification pour les outils choisis
+
+## Configuration des fichiers
+
+### Fichier dataset.csv
+L'utilisateur doit lister les assets à scanner dans un fichier nommé `dataset.csv`. Chaque ligne de ce fichier représente un asset à scanner.
+
+### Fichier properties
+L'utilisateur doit configurer les sources de données dans un fichier `properties`. Ce fichier doit inclure les informations nécessaires pour se connecter aux sources de données choisies.
 
 ## Choix de la source de données
 
